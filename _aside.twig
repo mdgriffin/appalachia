@@ -23,6 +23,8 @@
 
 	{% endif %}
 
+	{{ widgets('aside_top') }}
+
 	{% if theme.showSidebarRecent %}
 
 		{% for ct in app.config.get("contenttypes") if not ct.viewless|default(false) %}
@@ -48,5 +50,7 @@
 		{% endfor %}
 
 	{% endif %}
+
+	{{ widgets('aside_bottom') }}
 
 <aside>
